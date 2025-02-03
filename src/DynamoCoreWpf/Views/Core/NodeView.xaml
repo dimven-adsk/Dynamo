@@ -400,8 +400,6 @@
                       Grid.Row="2"
                       Grid.Column="0"
                       Margin="-25,3,0,0"
-                      VerticalAlignment="Top"
-                      HorizontalContentAlignment="Stretch"
                       Canvas.ZIndex="6"
                       ItemsSource="{Binding Path=InPorts}"
                       Style="{StaticResource InOutPortControlStyle}" />
@@ -411,8 +409,6 @@
                       Grid.Row="2"
                       Grid.Column="2"
                       Margin="{Binding OriginalName, Converter={StaticResource NodeOriginalNameToMarginConverter}}"
-                      VerticalAlignment="Top"
-                      HorizontalContentAlignment="Stretch"
                       Canvas.ZIndex="4"
                       ItemsSource="{Binding Path=OutPorts}"
                       Style="{StaticResource InOutPortControlStyle}" />

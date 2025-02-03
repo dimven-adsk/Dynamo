@@ -2756,11 +2756,37 @@
     </Style>
 
     <Style x:Key="InOutPortControlStyle" TargetType="ItemsControl">
-        <Setter Property="ItemsPanel">
+        <Setter
+            Property="VerticalAlignment"
+            Value="Top" />
+        <Setter
+            Property="HorizontalContentAlignment"
+            Value="Stretch" />
+        <Setter
+            Property="VirtualizingStackPanel.IsVirtualizing"
+            Value="True" />
+        <Setter
+            Property="ScrollViewer.CanContentScroll"
+            Value="True" />
+        <Setter
+            Property="ItemsPanel">
             <Setter.Value>
                 <ItemsPanelTemplate>
-                    <dynui:InOutPortPanel HorizontalAlignment="Center" VerticalAlignment="Stretch" />
+                    <dynui:InOutPortPanel />
                 </ItemsPanelTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter
+            Property="Template">
+            <Setter.Value>
+                <ControlTemplate
+                    TargetType="ItemsControl">
+                    <ScrollViewer
+                        Focusable="False">
+                        <ItemsPresenter
+                            SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}" />
+                    </ScrollViewer>
+                </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
