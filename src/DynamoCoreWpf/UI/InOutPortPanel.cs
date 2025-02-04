@@ -7,7 +7,7 @@ using Dynamo.ViewModels;
 
 namespace Dynamo.UI.Controls
 {
-    public class InOutPortPanel : VirtualizingStackPanel
+    public class InOutPortPanel : StackPanel
     {
         protected override Size ArrangeOverride(Size arrangeSize)
         {

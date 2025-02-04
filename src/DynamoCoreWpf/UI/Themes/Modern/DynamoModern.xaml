@@ -2757,18 +2757,6 @@
 
     <Style x:Key="InOutPortControlStyle" TargetType="ItemsControl">
         <Setter
-            Property="VerticalAlignment"
-            Value="Top" />
-        <Setter
-            Property="HorizontalContentAlignment"
-            Value="Stretch" />
-        <Setter
-            Property="VirtualizingStackPanel.IsVirtualizing"
-            Value="True" />
-        <Setter
-            Property="ScrollViewer.CanContentScroll"
-            Value="True" />
-        <Setter
             Property="ItemsPanel">
             <Setter.Value>
                 <ItemsPanelTemplate>
@@ -2776,19 +2764,10 @@
                 </ItemsPanelTemplate>
             </Setter.Value>
         </Setter>
-        <Setter
-            Property="Template">
-            <Setter.Value>
-                <ControlTemplate
-                    TargetType="ItemsControl">
-                    <ScrollViewer
-                        Focusable="False">
-                        <ItemsPresenter
-                            SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}" />
-                    </ScrollViewer>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <!--settings that were applied in the node view-->
+        <Setter Property="VerticalAlignment" Value="Top" />
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
     </Style>
 
     <Style x:Key="{x:Type dynui:ImageCheckBox}" TargetType="{x:Type dynui:ImageCheckBox}">
