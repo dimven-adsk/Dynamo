@@ -1844,7 +1844,43 @@ namespace Dynamo.Controls
             throw new NotSupportedException();
         }
     }
-    
+
+    public class ZoomToSimpleVisibilityConverter : IMultiValueConverter
+    {
+        public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
+        {
+            if (values[0] is double zoomLevel &&
+                values[1] is bool isCollapsed &&
+                !isCollapsed && zoomLevel <= Configurations.ZoomSimpleNodesThreshold)
+                return Visibility.Visible;
+
+            return Visibility.Collapsed;
+        }
+
+        public object[] ConvertBack(object value, Type[] targetTypes, object parameter, CultureInfo culture)
+        {
+            throw new NotSupportedException();
+        }
+    }
+
+    public class ZoomToAdvancedVisibilityConverter : IMultiValueConverter
+    {
+        public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
+        {
+            if (values[0] is double zoomLevel &&
+                values[1] is bool isCollapsed &&
+                !isCollapsed && zoomLevel > Configurations.ZoomSimpleNodesThreshold)
+                return Visibility.Visible;
+
+            return Visibility.Collapsed;
+        }
+
+        public object[] ConvertBack(object value, Type[] targetTypes, object parameter, CultureInfo culture)
+        {
+            throw new NotSupportedException();
+        }
+    }
+
     public class ZoomToOpacityConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)

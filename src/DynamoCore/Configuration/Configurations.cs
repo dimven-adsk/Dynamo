@@ -146,6 +146,11 @@ namespace Dynamo.Configuration
         /// </summary>
         public static readonly double ZoomDirectEditThreshold = 0.5;
 
+        /// <summary>
+        /// Global zoom threshold for renaming Nodes and Notes 
+        /// </summary>
+        public static readonly double ZoomSimpleNodesThreshold = 0.2;
+
         #endregion
 
         #region Tab Bar Configurations

@@ -91,6 +91,8 @@
     <controls:ViewButtonClipRectConverter x:Key="ViewButtonClipRectConverter" />
     <controls:ZoomToOpacityConverter x:Key="ZoomToOpacityConverter" />
     <controls:ZoomToBooleanConverter x:Key="ZoomToBooleanConverter" />
+    <controls:ZoomToSimpleVisibilityConverter x:Key="ZoomToSimpleVisibilityConverter" />
+    <controls:ZoomToAdvancedVisibilityConverter x:Key="ZoomToAdvancedVisibilityConverter" />
     <controls:ZoomToVisibilityCollapsedConverter x:Key="ZoomToVisibilityCollapsedConverter" />
     <controls:PortNameToWidthConverter x:Key="PortNameToWidthConverter" />
     <controls:TooltipLengthTruncater x:Key="TooltipLengthTruncater" />
